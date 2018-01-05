@@ -1,7 +1,13 @@
 package com.company;
 
-public class ShapeFactory {
+public class ShapeFactory extends AbstractFactory {
 
+    @Override
+    Color getColor(String color) {
+        return null;
+    }
+
+    @Override
     public Shape getShap(String shapeType) {
         if ("CIRCLE".equals(shapeType)) {
             return new Circle();
