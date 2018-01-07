@@ -4,18 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        ShapeCache.loadCashe();
 
-        MealBuilder mealBuilder = new MealBuilder();
+        Shape clonedShape1 = (Shape) ShapeCache.getShape("1");
+        System.out.println("Shape : " + clonedShape1.getType());
 
-        Meal vegMeal = mealBuilder.prepareVegMeal();
-        System.out.println("Veg Meal");
-        vegMeal.showItems();
-        System.out.println("Total Cost: " + vegMeal.getCost());
+        Shape clonedShape2 = (Shape) ShapeCache.getShape("2");
+        System.out.println("Shape : " + clonedShape2.getType());
 
-        Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
-        System.out.println("\n\nNon-Veg Meal");
-        nonVegMeal.showItems();
-        System.out.println("Total Cost: " + nonVegMeal.getCost());
+        Shape clonedShape3 = (Shape) ShapeCache.getShape("3");
+        System.out.println("Shape : " + clonedShape3.getType());
+
 
 
     }
